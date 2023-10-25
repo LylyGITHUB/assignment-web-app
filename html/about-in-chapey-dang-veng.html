@@ -24,7 +24,18 @@
 </head>
 
 <body>
-
+    <script>
+        function openPage(){
+        const searchParams = new URLSearchParams(window.location.search);
+        const about = searchParams.get("about");
+        if (about) {
+            console.log('success about')
+        } else {
+            window.location.href ='/html/login-form.html'
+        }
+    }
+    openPage()
+    </script>
     <div style=" display: flex;justify-content: space-between;">
         <h3 style="font-size: 20px;font-family: 'Moulpali', cursive;">ចាប៉ីដងវែង</h3>
     </div><br>
@@ -159,16 +170,6 @@
         // Update the URL with the parameters
         window.location.search = params.toString();
     }
-    function openPage(){
-        const searchParams = new URLSearchParams(window.location.search);
-        const about = searchParams.get("about");
-        if (about) {
-            console.log('success about')
-        } else {
-            window.location.href ='/html/login-form.html'
-        }
-    }
-    openPage()
 </script>
 
 </html>

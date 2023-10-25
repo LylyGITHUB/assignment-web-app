@@ -42,14 +42,4 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
-        function getParameters() {
-            const searchParams = new URLSearchParams(window.location.search);
-            const detail = searchParams.get("detail");
-            const about = searchParams.get("about");
-            if (detail || about) {
-                console.log(`success chapey detail`);
-            } else {
-                window.location.href ='/html/login-form.html'
-            }
-        }
-        getParameters();
+        

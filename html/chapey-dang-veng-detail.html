@@ -22,6 +22,19 @@
 </head>
 
 <body>
+    <script>
+        function getParameters() {
+            const searchParams = new URLSearchParams(window.location.search);
+            const detail = searchParams.get("detail");
+            const about = searchParams.get("about");
+            if (detail || about) {
+                console.log(`success chapey detail`);
+            } else {
+                window.location.replace('/html/login-form.html')
+            }
+        }
+        getParameters();
+    </script>
     <div style=" display: flex;justify-content: space-between;">
         <h3 style="font-size: 20px;">ចាប៉ីដងវែង</h3>
     </div><br>
